@@ -15,19 +15,12 @@ npm install
 ## Dev (client-side rendering)
 ```
 npm start -s (-s is optional，will neglect unimportant message)
-open http://localhost:3002
+open http://localhost:devPort
 ```
 
 ## Production (server-side rendering)
 ```
 npm run server
 
-open http://localhost:20002
-```
-it equals to
-```
-npm run build
-npm run production
-
-open http://localhost:20002
+open http://localhost:serverPort
 ```
