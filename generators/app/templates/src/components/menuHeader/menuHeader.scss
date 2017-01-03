@@ -1,0 +1,18 @@
+.admin-header {
+  height: 65px;
+  background: #1eb6f8;
+}
+.admin-header__title_wrapper {
+  text-align: center;
+}
+.admin-header__title, .admin-header__name {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 200;
+  &:hover {
+    color: #fff;
+  }
+}
+.admin-header__name {
+  text-align: center;
+}

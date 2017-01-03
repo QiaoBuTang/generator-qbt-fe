@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+img {
+  border: none;
+  vertical-align: top;
+  &.error, &.empty {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none
+}
+
+
+body {
+  font-weight: 300;
+  font-size: 12px;
+  overflow: auto;
+  background-color: $background-color;
+}
