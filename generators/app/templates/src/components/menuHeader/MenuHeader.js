@@ -10,7 +10,7 @@ export default class MenuHeader extends Component {
   render() {
     return (
       <Row className="admin-header" type="flex" align="middle">
-        <Col span={4} className="admin-header__title_wrapper"><span className="admin-header__title">乔布简历后台</span></Col>
+        <Col span={4} className="admin-header__title_wrapper"><span className="admin-header__title">乔布简历</span></Col>
         <Col span={4} offset={16} className="admin-header__name">{this.props.menu.name}</Col>
       </Row>
     );

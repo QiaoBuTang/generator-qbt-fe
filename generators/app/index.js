@@ -85,17 +85,17 @@ module.exports = class extends Generator {
       {
         template: `${templatePath}/tools/devServer.js`,
         destination: '/tools/devServer.js',
-        params: {devPort: this.devPort}
+        params: {devPort: this.props.devPort}
       },
       {
         template: `${templatePath}/tools/prodServer.js`,
         destination: '/tools/prodServer.js',
-        params: {serverPort: this.serverPort}
+        params: {serverPort: this.props.serverPort}
       },
       {
         template: `${templatePath}/Dockerfile`,
         destination: 'Dockerfile',
-        params: {serverPort: this.serverPort}
+        params: {serverPort: this.props.serverPort}
       },
       {
         template: `${templatePath}/package.json`,

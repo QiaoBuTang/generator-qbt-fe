@@ -23,6 +23,9 @@ export default class App extends Component {
     return (
       <div>
         <MenuHeader />
+        <div className="admin-detail">
+          {this.props.children}
+        </div>
       </div>
     );
   }
