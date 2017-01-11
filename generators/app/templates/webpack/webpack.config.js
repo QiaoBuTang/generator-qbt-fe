@@ -4,8 +4,6 @@ import getLoaders from './loaders';
 import getPlugins from './plugins';
 import nodeExternals from 'webpack-node-externals';
 import {STATIC_PREFIX} from '../config.json';
-const dependencies = require('../package.json').dependencies;
-delete dependencies['antd'];
 
 function getBaseConfig(env) {
   return {
@@ -38,12 +36,12 @@ export function getProdConfigs() {
   const env = 'production';
   const config = Object.assign({}, getBaseConfig(env), {
     entry: {
-      index: ['babel-polyfill', './src/index.js'],
-      vendor: Object.keys(dependencies)
+      index: ['babel-polyfill', './src/index.js']
     },
     output: {
       path: path.join(__dirname, '..', '/dist'), // Note: Physical files are only output by the production build task `npm run build`.
-      filename: '/[name].[hash].js',
+      filename: '/[name].[chunkhash].js',
+      chunkFilename: "[chunkhash].js",
       publicPath: `${STATIC_PREFIX}/`
     }
   });

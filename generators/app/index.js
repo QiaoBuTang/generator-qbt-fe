@@ -78,7 +78,7 @@ module.exports = class extends Generator {
     const templatePath = this.sourceRoot();
 
     // static config
-    let dirList = ['bin', 'public', 'server', 'src', 'tools', 'webpack', '.babelrc', '.dockerignore', '.editorconfig', '.eslintrc', '.gitattributes', '.gitignore', '.npmrc', '.nvmrc', 'config.json', 'Dockerfile', 'package.json', 'README.md'];
+    let dirList = ['bin', 'public', 'server', 'src', 'tools', 'webpack', '.babelrc', '.dockerignore', '.editorconfig', '.eslintrc', '.gitattributes', '.gitignore', '.npmrc', '.nvmrc', 'Dockerfile', 'package.json', 'README.md'];
 
     // custom config
     let customConfig = [
@@ -96,6 +96,11 @@ module.exports = class extends Generator {
         template: `${templatePath}/Dockerfile`,
         destination: 'Dockerfile',
         params: {serverPort: this.props.serverPort}
+      },
+      {
+        template: `${templatePath}/config.sample.json`,
+        destination: 'config.sample.json',
+        params: {name: this.props.name}
       },
       {
         template: `${templatePath}/package.json`,
