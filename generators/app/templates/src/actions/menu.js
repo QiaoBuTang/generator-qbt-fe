@@ -17,8 +17,7 @@ export default {
         return res.json();
       }).then(function(data) {
         if (data.needLogin) {
-          // resolve(login);
-          resolve();
+          resolve(login);
         } else {
           states.menu.name = data.name;
           states.menu.access = data.access;
