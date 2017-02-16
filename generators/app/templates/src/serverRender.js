@@ -31,7 +31,6 @@ function renderFullPage(renderedContent, initialState, inWechat) {
       <script>
         window.__INITIAL_STATE__ = ${serialize(initialState)};
       </script>
-      ${inWechat ? '<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>' : ''}
       <script type="text/javascript" charset="utf-8" src="${STATIC_PREFIX}${ASSETS.manifest.js}"></script>
       <script type="text/javascript" charset="utf-8" src="${STATIC_PREFIX}${ASSETS.index.js}"></script>
     </body>
